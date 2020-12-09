@@ -1,0 +1,17 @@
+{
+  "confirmationPrompt": {
+    "maxAttempts": 2,
+    "messages": [
+      {
+        "content": "Okay, thanks for submitting your feelings!",
+        "contentType": "PlainText"
+      }
+    ]
+  },
+  "name": "Mixed",
+  "sampleUtterances": ["I'm happy and angry"],
+  "fulfillmentActivity": {
+    "type": "ReturnIntent"
+  },
+  "description": "Intent to detect bad feelings from a participant"
+}

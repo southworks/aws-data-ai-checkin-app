@@ -1,0 +1,31 @@
+{
+  "name": "Positive",
+  "sampleUtterances": [
+    "{feelingsPositives}"
+  ],
+  "fulfillmentActivity": {
+    "type": "ReturnIntent"
+  },
+  "description": "Intent to detect good feelings from a participant",
+  "slots": [
+    {
+      "name": "feelingsPositives",
+      "slotConstraint": "Required",
+      "slotType": "FEELINGSPositive",
+      "slotTypeVersion": "$LATEST",
+      "valueElicitationPrompt": {
+        "maxAttempts": 1,
+        "messages": [
+          {
+            "content": "White or red sauce?",
+            "contentType": "PlainText"
+          },
+          {
+            "content": "Garlic or tomato sauce?",
+            "contentType": "PlainText"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "c7bfa8e5-29b7-4e64-a54a-319cb8f43a75",
+		"name": "Daily-Check-In-App-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Daily Checkin App - Test Endpoints",
+			"item": [
+				{
+					"name": "sendAudioToAWS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Data\": [\r\n        {\r\n            \"feelingId\": \"6473e6b9-74af-e77f-2499-8a721a0cdac9\",\r\n            \"dateTime\": \"1588877229686\",\r\n            \"inputText\": \"irrelevant text\",\r\n            \"userId\": \"9671c425-002d-44e1-a1d4-705281ceecd4\",\r\n            \"blobUri\": \"http://\",\r\n            \"audioUrl\": \"https://smkarticle-bucket.s3.amazonaws.com/audio-1606506645941.mp3\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/feelings/audio",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"feelings",
+								"audio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendTextToAWS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Data\": [\r\n        {\r\n            \"inputText\": \"<TEXT MESSAGE>\",\r\n            \"userId\": \"9671c425-002d-44e1-a1d4-705281ceecd4\",\r\n            \"audioUrl\": \"http://\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/feelings/text",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"feelings",
+								"text"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserFeelings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/feelings/user/:userId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"feelings",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "9671c425-002d-44e1-a1d4-705281ceecd4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "trainLexBot",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"messages\": [\r\n\t\t{\r\n\t\t\t\"data\": {\r\n\t\t\t\t\"id\": \"9671c425-002d-44e1-a1d4-705281ceecd4\",\r\n\t\t\t\t\"name\": \"message, 2020-12-02T15:38:04.623Z\",\r\n\t\t\t\t\"sent\": \"2020-12-02T15:38:44.623Z\",\r\n\t\t\t\t\"lexResult\": {\r\n\t\t\t\t\t\"Payload\": {\r\n\t\t\t\t\t\t\"intentName\": \"NEUTRAL\"\r\n\t\t\t\t\t}\r\n\t\t\t\t},\r\n\t\t\t\t\"message\": \"iam happy\",\r\n\t\t\t\t\"userId\": \"9671c425-002d-44e1-a1d4-705281ceecd4\"\r\n\t\t\t},\r\n\t\t\t\"classifiedAs\": \"Positive\",\r\n\t\t\t\"keysWords\": [],\r\n\t\t\t\"messages\": [\r\n\t\t\t\t\"iam happy\"\r\n\t\t\t],\r\n\t\t\t\"save\": 1\r\n\t\t}\r\n\t],\r\n\t\"bucketName\": \"smkarticle-bucket-neutral\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/messages/train",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"messages",
+								"train"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5921e411-bb44-4685-9cc6-5b604ccc6c16",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "122b7d68-cc71-48fb-ab15-c6624e805ae2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0e95ad42-94de-43da-a5a9-20d2bea183b9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0d034c99-5a57-48ca-9c87-42a1dbf986e9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "eba0432d-557e-4e8b-ac04-a2f6a46b3ebb",
+			"key": "base_url",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}

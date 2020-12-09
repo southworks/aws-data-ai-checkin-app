@@ -1,0 +1,10 @@
+{
+  "name": "FEELINGSNeutral",
+  "description": "Feelings neutrals",
+  "valueSelectionStrategy": "TOP_RESOLUTION",
+  "enumerationValues": [
+    {
+      "value": "normal"
+    }
+  ]
+}

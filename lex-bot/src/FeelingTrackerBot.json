@@ -1,0 +1,44 @@
+{
+  "intents": [
+    {
+      "intentVersion": "$LATEST",
+      "intentName": "Positive"
+    },
+    {
+      "intentVersion": "$LATEST",
+      "intentName": "Negative"
+    },
+    {
+      "intentVersion": "$LATEST",
+      "intentName": "Neutral"
+    },
+    {
+      "intentVersion": "$LATEST",
+      "intentName": "Mixed"
+    }
+  ],
+  "name": "FeelingTracker",
+  "locale": "en-US",
+  "abortStatement": {
+    "messages": [
+      {
+        "content": "Sorry, I'm not able to assist at this time",
+        "contentType": "PlainText"
+      }
+    ]
+  },
+  "clarificationPrompt": {
+    "maxAttempts": 2,
+    "messages": [
+      {
+        "content": "I didn't understand you, what would you like to do?",
+        "contentType": "PlainText"
+      }
+    ]
+  },
+  "voiceId": "Salli",
+  "childDirected": false,
+  "idleSessionTTLInSeconds": 600,
+  "description": "Bot to detect participant feelings",
+  "detectSentiment": true
+}

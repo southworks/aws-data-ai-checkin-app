@@ -1,0 +1,8 @@
+{
+  "region": "us-east-1",
+  "accessKeyId": "<AWS_ACCESS_KEY_ID>",
+  "secretAccessKey": "<AWS_SECRET_ACCESS_KEY>",
+  "accountId": "<AWS_ACCOUNT_ID>",
+  "resourcesPrefix": "smkarticle",
+  "stackName": "SamarkandArticleStack"
+}

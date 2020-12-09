@@ -1,0 +1,10 @@
+{
+  "name": "FEELINGSPositive",
+  "description": "Feelings positives",
+  "valueSelectionStrategy": "TOP_RESOLUTION",
+  "enumerationValues": [
+    {
+      "value": "great"
+    }
+  ]
+}

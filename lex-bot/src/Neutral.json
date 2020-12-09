@@ -1,0 +1,31 @@
+{
+  "name": "Neutral",
+  "sampleUtterances": [
+    "{feelingsNeutrals}"
+  ],
+  "fulfillmentActivity": {
+    "type": "ReturnIntent"
+  },
+  "description": "Intent to detect neutral feelings from a participant",
+  "slots": [
+    {
+      "name": "feelingsNeutrals",
+      "slotConstraint": "Required",
+      "slotType": "FEELINGSNeutral",
+      "slotTypeVersion": "$LATEST",
+      "valueElicitationPrompt": {
+        "maxAttempts": 1,
+        "messages": [
+          {
+            "content": "White or red sauce?",
+            "contentType": "PlainText"
+          },
+          {
+            "content": "Garlic or tomato sauce?",
+            "contentType": "PlainText"
+          }
+        ]
+      }
+    }
+  ]
+}

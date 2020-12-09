@@ -1,0 +1,16 @@
+{
+  "name": "audiotest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "audio-positive": "node index.js I_Feel_Happy.mp3",
+    "audio-negative": "node index.js I_Feel_Sad.mp3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0"
+  }
+}
