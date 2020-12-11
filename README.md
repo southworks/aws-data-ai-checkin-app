@@ -1,4 +1,4 @@
-# Article code
+You can find the complete article describing the scenario tackled with this reference implementation [here](https://medium.com/southworks/building-a-mental-health-monitoring-app-with-aws-ai-services-part-i-fa7566c6a3a5).
 
 ## Overview
 
