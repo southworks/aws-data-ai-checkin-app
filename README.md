@@ -1,4 +1,6 @@
-# Article code
+# Building a 'Mental Health Monitoring' App with AWS AI Services - Part I
+
+You can find the complete [article](https://medium.com/southworks/building-a-mental-health-monitoring-app-with-aws-ai-services-part-i-fa7566c6a3a5) describing the scenario tackled with this reference implementation.
 
 ## Overview
 
